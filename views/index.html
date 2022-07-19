@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<section id="intro">
+    <header>
+        <a href="/">
+            <img src="./assets/logo.png">
+        </a>
+    </header>
+    <main>
+        <p>Ficar em casa em períodos longos, não deve ser nada fácil.</p>
+        <p>Por isso, iremos catalogar ideias,<strong>brincadeiras, jogos, filmes, livros, cursos, dicas</strong> e tudo o que for necessário para tornar esse momento mais interessante.</p>
+        <p>Comece clicando em <strong>ver ideias</strong> para ver as ideias cadastradas e contribua <strong>adicionando a sua ideia</strong>.</p>
+    </main>
+    <section id="buttons">
+        <button onclick="onOff()">+ Adicionar Ideia</button>
+        <a href="/ideias" class="button">Ver Ideias</a>
+    </section>
+    <footer>Com 💖 <a target="_blank" href="https://github.com/samanthazenezi">Samantha Zenezi</a></footer>  
+</section>
+<section id="last-ideias">
+    {% include "all_ideias.html" %}
+</section>
+
+{% endblock %}
